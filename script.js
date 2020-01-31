@@ -1,24 +1,42 @@
-var key = {
-    left: 37,
-    up: 38,
-    right: 39,
-};
+var countArr = [
+    {
+        id: 0,
+        name: 'Subhanallah',
+        count: 33,
+    },
+    {
+        id: 1,
+        name: 'Alhamdulillah',
+        count: 69,
+    },
+    {
+        id: 2,
+        name: 'Allahuakbar',
+        count: 420,
+    },
+];
 
-var position = {
-    left: 50,
-    mid: 200,
-    right: 350,
-};
+function addNewCounter(param) {
 
-var distance = 150;
-
-function playerMovement(action) {
+    var newName = document.getElementById('newcountername').value;
     
-    if (!action) {action = window.event;};
-    var keyCode = action.keyCode || action.which;
+    if (!newName.length) {
+        alert('Nama Counter tidak boleh kosong!');
+        return false;
+    }
 
-    var carPos = document.getElementById('player').style.left;
-    
+    if (!countArr.length) {
+      var lastID = -1;
+    } else {
+      var lastID = document.getElementById(countArr.length-1);
+    }
+
+    param.push({
+        id: lastID+1,
+        name: newName,
+        count: 0,
+    });
+
+
+
 }
-
-window.addEventListener('keydown',document,playerMovement());

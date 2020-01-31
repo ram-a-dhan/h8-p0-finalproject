@@ -7,28 +7,83 @@ body {
     background-color: #000;
 }
 
-#canvas {
-    background-color: #202020;
-    height: 640px;
+#container {
+    display: block;
     width: 480px;
+    height: 100vh;
     margin: auto;
+    /* overflow-y: scroll; */
+    background-color: #202020;
+    /* scrollbar-width: 0px; */
 }
 
-#player {
-    background-color: red;
-    width: 70px;
-    height: 110px;
-    /* margin: auto; */
-    position: relative;
-    bottom: -500px;
-    left: 200px;
+#addmore {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    background-color: #404040;
 }
 
-.obstacle {
-    background-color: blue;
-    width: 70px;
-    height: 110px;
-    /* margin: auto; */
-    position: relative;
+#addnewcounter h1, .button h1 {
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
 }
 
+.counter {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.count {
+    display: block;
+    float: left;
+    width: 280px;
+    height: 100%;
+}
+
+.countername, .counternumber {
+    text-align: center;
+    color: #fff;
+}
+
+.countername {
+    font-size: 18px;
+}
+
+.counternumber {
+    font-size: 28px;
+}
+
+.button, #addnewcounter {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #404040;
+}
+
+.button:hover, #addnewcounter:hover {
+    background-color: #606060;
+}
+
+#addnewcounter {
+    float: left;
+}
+
+#newcountername {
+    display: block;
+    float: left;
+    width: 390px;
+    margin: 7px;
+}
+
+.delete, .edit {
+    float: left;
+}
+
+.minus, .plus {
+    float: right;
+}
