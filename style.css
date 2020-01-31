@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #000;
+}
+
+#canvas {
+    background-color: #202020;
+    height: 640px;
+    width: 480px;
+    margin: auto;
+}
+
+#player {
+    background-color: red;
+    width: 70px;
+    height: 110px;
+    /* margin: auto; */
+    position: relative;
+    bottom: -500px;
+    left: 200px;
+}
+
+.obstacle {
+    background-color: blue;
+    width: 70px;
+    height: 110px;
+    /* margin: auto; */
+    position: relative;
+}
+
