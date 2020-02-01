@@ -35,7 +35,7 @@ function addNewCounter() {
         id: lastID+1,
         name: newName,
         count: 0,
-    });
+    }); console.log(countArr[countArr.length-1]);
 
     var ctr0 = document.createElement('div');
     ctr0.setAttribute('class','counter');
@@ -72,9 +72,93 @@ function addNewCounter() {
         ctr04.setAttribute('class','button plus');
         document.getElementById(countArr[countArr.length-1].id.toString()).appendChild(ctr04);
     
-
+    console.log(document.getElementById(countArr[countArr.length-1].id.toString()));
 }
 
 // document.getElementById('addnewcounter').onclick = addNewCounter(countArr);
 document.getElementById('addnewcounter').addEventListener('click',addNewCounter);
 
+function plusPlus() {
+    for (j = 0; j < countArr.length; j++) {
+        if (countArr[j].id == this.parentNode.id) {
+            countArr[j].count++;
+            console.log(countArr[j]);
+        this.previousElementSibling.previousElementSibling.children[1].innerHTML = countArr[j].count;
+        // console.log(this.parentNode);
+        break;
+      }
+    }
+
+}
+
+var plusButtons = document.getElementsByClassName('plus');
+
+for (i = 0; i < plusButtons.length; i++) {
+    plusButtons[i].addEventListener('click',plusPlus);
+}
+
+function minusMinus() {
+
+    if (this.previousElementSibling.children[1].innerHTML == 0) {return false;}
+
+    for (j = 0; j < countArr.length; j++) {
+      if (countArr[j].id == this.parentNode.id) {
+        countArr[j].count--;
+        this.previousElementSibling.children[1].innerHTML = countArr[j].count;
+        break;
+      }
+    }
+
+}
+
+var minusButtons = document.getElementsByClassName('minus');
+
+for (i = 0; i < minusButtons.length; i++) {
+    minusButtons[i].addEventListener('click',minusMinus);
+}
+
+function zeroZero() {
+    
+    for (j = 0; j < countArr.length; j++) {
+      if (countArr[j].id == this.parentNode.id) {
+
+        var resConfirm = confirm(`Are You sure You want to reset this counter named \"${countArr[j].name}\" ?`);
+        if (!resConfirm) {return false;}
+
+        countArr[j].count = 0;
+        this.nextElementSibling.children[1].innerHTML = countArr[j].count;
+        break;
+      }
+    }
+
+}
+
+var resetButtons = document.getElementsByClassName('reset');
+
+for (i = 0; i < resetButtons.length; i++) {
+    resetButtons[i].addEventListener('click',zeroZero);
+}
+
+function delDel() {
+    
+    for (j = 0; j < countArr.length; j++) {
+      if (countArr[j].id == this.parentNode.id) {
+
+        var resConfirm = confirm(`Are You sure You want to delete this counter named \"${countArr[j].name}\" ?`);
+        if (!resConfirm) {return false;}
+
+
+        var toDel = document.getElementById(countArr[j].id);
+        toDel.parentNode.removeChild(toDel);
+        countArr.splice([j],1);
+        break;
+      }
+    }
+
+}
+
+var deleteButtons = document.getElementsByClassName('delete');
+
+for (i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener('click',delDel);
+}
