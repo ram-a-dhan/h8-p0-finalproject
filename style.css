@@ -99,19 +99,29 @@ body {
     line-height: 40px;
 }
 
-.button, #addnewcounter, #menubutton {
+.button, #addnewcounter, #menubutton, #infobutton {
     display: block;
     width: 70px;
     height: 70px;
     background-color: #404040;
 }
 
-.button:hover, #addnewcounter:hover, #menubutton:hover {
+.button:hover, #addnewcounter:hover, #menubutton:hover, #infobutton:hover {
+    background-color: #505050;
+}
+
+.button:active, #addnewcounter:active, #menubutton:active, #infobutton:active {
     background-color: #606060;
 }
 
 #menubutton {
     background-image: url(img/menu-4-32.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#infobutton {
+    background-image: url(img/info-2-40.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -140,7 +150,7 @@ body {
     background-position: center;
 }
 
-#addnewcounter, #menubutton {
+#addnewcounter, #menubutton, #infobutton {
     float: left;
 }
 

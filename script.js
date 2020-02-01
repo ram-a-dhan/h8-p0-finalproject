@@ -175,3 +175,14 @@ var deleteButtons = document.getElementsByClassName('delete');
 for (i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener('click',delDel);
 }
+
+function menuAlert() {
+    alert('You didn\'t think i\'d be bothered to make a menu, did You?');
+}
+
+function infoAlert() {
+    alert('2020 © Muhammad Ramadhan');
+}
+
+document.getElementById('menubutton').addEventListener('click',menuAlert);
+document.getElementById('infobutton').addEventListener('click',infoAlert);
