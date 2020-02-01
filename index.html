@@ -5,39 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Bijikir App</title>
+    <title>Counter App</title>
 </head>
 <body>
+<div id="content">
+    <div id="menuspace"></div>
+
     <div id="container">
+    <div id="containerspace"></div>    
+
+        <div id="menu">
+            <div id="menubutton"></div><h1>Counter App</h1>
+        </div>
+
+        <div id="addmore">
+            <input type="text" name="newcountername" id="newcountername" value="" placeholder="add new counter name here">
+            <div id="addnewcounter"></div>
+        </div>
 
         <div class="counter" id="0">
-            <div class="button delete"><h1>x</h1></div>
-            <div class="button edit"><h1>e</h1></div>
-            <div class="count"><p class="countername">Subhanallah</p><h2 class="counternumber">33</h2></div>
-            <div class="button minus"><h1>-</h1></div>
-            <div class="button plus"><h1>+</h1></div>
+            <div class="button delete"></div>
+            <div class="button reset"></div>
+            <div class="count">
+                <p class="countername">Sugar</p>
+                <h2 class="counternumber">16</h2>
+            </div>
+            <div class="button minus"></div>
+            <div class="button plus"></div>
         </div>
-        
+
         <div class="counter" id="1">
-            <div class="button delete"><h1>x</h1></div>
-            <div class="button edit"><h1>e</h1></div>
-            <div class="count"><p class="countername">Alhamdulillah</p><h2 class="counternumber">69</h2></div>
-            <div class="button minus"><h1>-</h1></div>
-            <div class="button plus"><h1>+</h1></div>
+            <div class="button delete"></div>
+            <div class="button reset"></div>
+            <div class="count">
+                <p class="countername">Spice</p>
+                <h2 class="counternumber">16</h2>
+            </div>
+            <div class="button minus"></div>
+            <div class="button plus"></div>
         </div>
 
         <div class="counter" id="2">
-            <div class="button delete"><h1>x</h1></div>
-            <div class="button edit"><h1>e</h1></div>
-            <div class="count"><p class="countername">Allahuakbar</p><h2 class="counternumber">420</h2></div>
-            <div class="button minus"><h1>-</h1></div>
-            <div class="button plus"><h1>+</h1></div>
+            <div class="button delete"></div>
+            <div class="button reset"></div>
+            <div class="count">
+                <p class="countername">Everything Nice</p>
+                <h2 class="counternumber">7</h2>
+            </div>
+            <div class="button minus"></div>
+            <div class="button plus"></div>
         </div>
 
-        <div id="addmore"><input type="text" name="newcountername" id="newcountername" value="" placeholder="add new counter name here"><div id="addnewcounter"><h1>+</h1></div></div>
-        
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
