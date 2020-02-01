@@ -73,6 +73,19 @@ function addNewCounter() {
         document.getElementById(countArr[countArr.length-1].id.toString()).appendChild(ctr04);
     
     console.log(document.getElementById(countArr[countArr.length-1].id.toString()));
+
+    var newPlus = document.getElementsByClassName('plus');
+    newPlus[newPlus.length-1].addEventListener('click',plusPlus);
+
+    var newMinus = document.getElementsByClassName('minus');
+    newMinus[newMinus.length-1].addEventListener('click',minusMinus);
+
+    var newReset = document.getElementsByClassName('reset');
+    newReset[newReset.length-1].addEventListener('click',zeroZero);
+
+    var newDelete = document.getElementsByClassName('delete');
+    newDelete[newDelete.length-1].addEventListener('click',delDel);
+
 }
 
 // document.getElementById('addnewcounter').onclick = addNewCounter(countArr);
